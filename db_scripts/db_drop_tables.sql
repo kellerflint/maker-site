@@ -1,0 +1,4 @@
+DROP TABLE User;
+DROP TABLE Subject;
+DROP TABLE Location;
+DROP TABLE Rank;
