@@ -22,8 +22,8 @@ CREATE TABLE Subject
 CREATE TABLE Location
 (
     location_id int NOT NULL AUTO_INCREMENT,
-    location_name varchar(50) NOT NULL,
-    location_address varchar(50) NOT NULL,
+    location_name varchar(50),
+    location_address varchar(90) NOT NULL,
     location_description varchar(500),
 
     PRIMARY KEY (location_id)
@@ -36,5 +36,98 @@ CREATE TABLE Rank
     subject_id int,
 
     PRIMARY KEY (rank_id),
-    FOREIGN KEY (subject_id) REFERENCES Subject(subject_id)
+    FOREIGN KEY (subject_id) REFERENCES Subject(subject_id) ON UPDATE CASCADE
+);
+
+CREATE TABLE Student
+(
+    student_id int NOT NULL AUTO_INCREMENT,
+    user_id int NOT NULL,
+    rank_id int NOT NULL,
+
+    PRIMARY KEY (student_id),
+    FOREIGN KEY (user_id) REFERENCES User(user_id) ON UPDATE CASCADE,
+    FOREIGN KEY (rank_id) REFERENCES Rank(rank_id) ON UPDATE CASCADE
+
+);
+
+CREATE TABLE Badge
+(
+    badge_id int NOT NULL AUTO_INCREMENT,
+    badge_title varchar(50) NOT NULL,
+    rank_id int,
+    badge_required bit NOT NULL,
+    badge_description varchar(500),
+
+    PRIMARY KEY (badge_id),
+    FOREIGN KEY (rank_id) REFERENCES Rank(rank_id) ON UPDATE CASCADE
+);
+
+CREATE TABLE Instructor
+(
+    instructor_id int NOT NULL AUTO_INCREMENT,
+    user_id int NOT NULL,
+    rank_id int,
+    location_id int,
+
+    PRIMARY KEY (instructor_id),
+    FOREIGN KEY (user_id) REFERENCES User(user_id) ON UPDATE CASCADE,
+    FOREIGN KEY (rank_id) REFERENCES Rank(rank_id) ON UPDATE CASCADE
+    FOREIGN KEY (location_id) REFERENCES Location(location_id) ON UPDATE CASCADE
+);
+
+CREATE TABLE Admin
+(
+    admin_id int NOT NULL AUTO_INCREMENT,
+    user_id int NOT NULL,
+
+    PRIMARY KEY (admin_id),
+    FOREIGN KEY (user_id) REFERENCES User(user_id) ON UPDATE CASCADE
+);
+
+CREATE TABLE Badge_Request
+(
+    badge_id int,
+    student_id int,
+    badge_request_date datetime NOT NULL,
+    badge_request_status varchar(50) NOT NULL,
+    badge_request_notes varchar(500),
+    badge_request_review_date datetime,
+
+    PRIMARY KEY (badge_id, student_id, badge_request_date),
+    FOREIGN KEY (badge_id) REFERENCES Badge(badge_id) ON UPDATE CASCADE,
+    FOREIGN KEY (student_id) REFERENCES Student(student_id) ON UPDATE CASCADE
+);
+
+CREATE TABLE Rank_Request
+(
+    rank_id int,
+    student_id int,
+    rank_request_date datetime NOT NULL,
+    rank_request_status varchar(50) NOT NULL,
+    rank_request_notes varchar(500),
+    rank_request_review_date datetime,
+
+    PRIMARY KEY (rank_id, student_id, rank_request_date),
+    FOREIGN KEY (rank_id) REFERENCES Rank(rank_id) ON UPDATE CASCADE,
+    FOREIGN KEY (student_id) REFERENCES Student(student_id) ON UPDATE CASCADE
+);
+
+CREATE TABLE Session 
+(
+    session_id int NOT NULL AUTO_INCREMENT,
+    session_title varchar(50) NOT NULL,
+    location_id int,
+    subject_id int,
+    session_days varchar(50),
+    session_start_date date,
+    session_end_date date,
+    session_start_time time(4),
+    session_end_time time(4),
+    instructor_id int,
+
+    PRIMARY KEY (session_id),
+    FOREIGN KEY (location_id) REFERENCES Location(location_id) ON UPDATE CASCADE,
+    FOREIGN KEY (subject_id) REFERENCES Subject(subject_id) ON UPDATE CASCADE,
+    FOREIGN KEY (instructor_id) REFERENCES Instructor(instructor_id) ON UPDATE CASCADE
 );
