@@ -72,7 +72,7 @@ CREATE TABLE Instructor
 
     PRIMARY KEY (instructor_id),
     FOREIGN KEY (user_id) REFERENCES User(user_id) ON UPDATE CASCADE,
-    FOREIGN KEY (rank_id) REFERENCES Rank(rank_id) ON UPDATE CASCADE
+    FOREIGN KEY (rank_id) REFERENCES Rank(rank_id) ON UPDATE CASCADE,
     FOREIGN KEY (location_id) REFERENCES Location(location_id) ON UPDATE CASCADE
 );
 
@@ -130,4 +130,12 @@ CREATE TABLE Session
     FOREIGN KEY (location_id) REFERENCES Location(location_id) ON UPDATE CASCADE,
     FOREIGN KEY (subject_id) REFERENCES Subject(subject_id) ON UPDATE CASCADE,
     FOREIGN KEY (instructor_id) REFERENCES Instructor(instructor_id) ON UPDATE CASCADE
+);
+
+CREATE TABLE Roster
+(
+    student_id int,
+    session_id int,
+
+    PRIMARY KEY (student_id, session_id)
 );
