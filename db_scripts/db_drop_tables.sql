@@ -1,3 +1,12 @@
+DROP TABLE User_Badge;
+DROP TABLE User_Rank;
+DROP TABLE Badge;
+DROP TABLE Rank;
+DROP TABLE Subject;
+DROP TABLE User;
+
+/* Old version
+
 DROP TABLE Roster;
 DROP TABLE Session;
 DROP TABLE Rank_Request;
@@ -10,3 +19,5 @@ DROP TABLE Rank;
 DROP TABLE Location;
 DROP TABLE Subject;
 DROP TABLE User;
+
+*/

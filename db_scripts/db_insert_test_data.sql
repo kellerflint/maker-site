@@ -1,3 +1,4 @@
+/* Old version
 
 insert into User values (default, 'tamberuname', 'Tamber', 'Tamberlast', 'tamber1', now());
 insert into User values (default, 'tooperuname', 'Tooper', 'Tooperlast', 'tooper1', now());
@@ -46,3 +47,10 @@ insert into Student values (default,
 insert into Student values (default, 
                             (select user_id from User where user_name = 'tergiuuname'), 
                             (select rank_id from Rank where rank_title = 'Novice'));
+
+insert into Badge_Request values (
+    (select student_id from Student where _name = 'tethanuname'),
+    (select badge_id from Badge where )
+);
+
+*/
