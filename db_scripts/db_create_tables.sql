@@ -32,7 +32,8 @@ CREATE TABLE Location
 CREATE TABLE Rank
 (
     rank_id int NOT NULL AUTO_INCREMENT,
-    rank_title int NOT NULL,
+    rank_title varchar(50) NOT NULL,
+    rank_level int NOT NULL,
     subject_id int,
 
     PRIMARY KEY (rank_id),
