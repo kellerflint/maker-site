@@ -13,8 +13,13 @@ insert into Rank values (default, 'Unranked', 0, @scratch);
 
 insert into Rank values (default, 'Novice', 1, @scratch);
 
+insert into Rank values (default, 'Apprentice', 1, @scratch);
+
 insert into Rank values (default, 'Adept', 2, @scratch);
 
 insert into Rank values (default, 'Expert', 3, @scratch);
 
 insert into Rank values (default, 'Master', 4, @scratch);
+
+
+
