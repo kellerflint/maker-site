@@ -21,6 +21,16 @@ insert into Rank values (default, 'Expert', 3, @scratch);
 
 insert into Rank values (default, 'Master', 4, @scratch);
 
+set @novice = (select rank_id from Rank where rank_title = 'Novice');
+
+insert into Badge values (default, 'Tutorial Master', @novice, 'true', 'TODO');
+
+insert into Badge values (default, 'Animate from Scrath', @novice, 'true', 'TODO');
+
+insert into Badge values (default, 'Musical Storyteller', @novice, 'true', 'TODO');
+
+insert into Badge values (default, 'My First Game', @novice, 'true', 'TODO');
+
 insert into Student values (default, 
                             (select user_id from User where user_name = 'tamberuname'), 
                             (select rank_id from Rank where rank_title = 'Apprentice'));

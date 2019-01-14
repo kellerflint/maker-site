@@ -57,7 +57,7 @@ CREATE TABLE Badge
     badge_id int NOT NULL AUTO_INCREMENT,
     badge_title varchar(50) NOT NULL,
     rank_id int,
-    badge_required bit NOT NULL,
+    badge_required varchar(5),
     badge_description varchar(500),
 
     PRIMARY KEY (badge_id),
