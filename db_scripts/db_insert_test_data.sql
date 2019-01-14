@@ -21,5 +21,18 @@ insert into Rank values (default, 'Expert', 3, @scratch);
 
 insert into Rank values (default, 'Master', 4, @scratch);
 
+insert into Student values (default, 
+                            (select user_id from User where user_name = 'tamberuname'), 
+                            (select rank_id from Rank where rank_title = 'Apprentice'));
 
+insert into Student values (default, 
+                            (select user_id from User where user_name = 'tooperuname'), 
+                            (select rank_id from Rank where rank_title = 'Novice'));
 
+insert into Student values (default, 
+                            (select user_id from User where user_name = 'tethanuname'), 
+                            (select rank_id from Rank where rank_title = 'Unranked'));
+
+insert into Student values (default, 
+                            (select user_id from User where user_name = 'tergiuuname'), 
+                            (select rank_id from Rank where rank_title = 'Novice'));
