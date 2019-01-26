@@ -1,3 +1,5 @@
+/* var/www/html/maker_site/db_scripts/db_drop_tables.sql */
+
 DROP TABLE User_Badge;
 DROP TABLE User_Rank;
 DROP TABLE Badge;

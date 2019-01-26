@@ -1,3 +1,5 @@
+/* var/www/html/maker_site/db_scripts/db_insert_test_data.sql */
+
 insert into User values (default, 'kellerflint', 'Keller', 'Flint', 'adminpassword000', 'admin', now());
 insert into User values (default, 'tamberuname', 'Tamber', 'Tamberlast', 'scrAtch03', 'student', now());
 insert into User values (default, 'tooperuname', 'Tooper', 'Tooperlast', 'scrAtch03', 'student', now());
@@ -50,6 +52,11 @@ insert into User_Badge values (@tergiu, @tutorial, now());
 insert into User_Badge values (@tergiu, @animate, now());
 
 insert into User_Rank values (@keller, @adept, now());
+insert into User_Rank values (@tamber, @apprentice, now());
+insert into User_Rank values (@tergiu, @novice, now());
+insert into User_Rank values (@tooper, @novice, now());
+insert into User_Rank values (@tethan, @unranked, now());
+
 
 /* Old version
 

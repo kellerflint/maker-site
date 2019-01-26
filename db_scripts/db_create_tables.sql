@@ -1,3 +1,5 @@
+/* var/www/html/maker_site/db_scripts/db_create_tables.sql */
+
 CREATE TABLE User
 (
     user_id int NOT NULL AUTO_INCREMENT,

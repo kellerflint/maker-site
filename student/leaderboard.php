@@ -4,20 +4,25 @@
 
 <?php 
 
-    $query = "select * from User";
+    $user_query = "select * from User";
+    $badge_query = "select"
 
-    $result_set = mysqli_query($db, $query);
+    $user_set = mysqli_query($db, $query);
+    $badge_set = mysqli_query($db, $query);
+
 
     $user_count = mysqli_num_rows($result_set);
 
     for ($i = 0; $i < $user_count; $i++) {
-        $item = mysqli_fetch_assoc($result_set);
+        $user_item = mysqli_fetch_assoc($user_set);
         echo '<p>';
-        echo $item['user_name'];
+        echo $user_item['first_name'] . ', ';
+        echo $user_item['user_role'] . ', ';
         echo '</p>';
     }
     
-    mysqli_free_result($result_set);
+    mysqli_free_result($user_set);
+    mysqli_free_result($user_set);
 
 ?>
 
