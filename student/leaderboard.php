@@ -5,23 +5,34 @@
 <?php 
 
     $user_query = "select * from User";
-    $badge_query = "select"
+ 
+    $user_set = mysqli_query($db, $user_query);
 
-    $user_set = mysqli_query($db, $query);
-    $badge_set = mysqli_query($db, $query);
-
-
-    $user_count = mysqli_num_rows($result_set);
+    $user_count = mysqli_num_rows($user_set);
 
     for ($i = 0; $i < $user_count; $i++) {
         $user_item = mysqli_fetch_assoc($user_set);
-        echo '<p>';
-        echo $user_item['first_name'] . ', ';
-        echo $user_item['user_role'] . ', ';
-        echo '</p>';
+        $user_id = (int) $user_item["user_id"];
+
+        $rank_query = "select rank_title from Rank where rank_id = (select rank_id from User_Rank where user_id = " . $user_id . ");";
+        
+        $rank_set = mysqli_query($db, $rank_query);
+        
+        $rank_item = mysqli_fetch_assoc($rank_set);
+
+        mysqli_free_result($rank_set);
+
+        echo '<div class="container">';
+        echo '<div class="badge_image">';
+        echo '</div>';
+        /*echo $rank_item['rank_title'];*/
+        echo '<div class="name">';
+        echo $user_item['first_name'];
+        echo '</div>';
+        /*echo $user_item['user_role'] . ', ';*/
+        echo '</div>';
     }
     
-    mysqli_free_result($user_set);
     mysqli_free_result($user_set);
 
 ?>

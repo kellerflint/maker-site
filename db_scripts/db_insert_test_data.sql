@@ -1,4 +1,4 @@
-/* var/www/html/maker_site/db_scripts/db_insert_test_data.sql */
+/* source /var/www/html/maker-site/db_scripts/db_insert_test_data.sql */
 
 insert into User values (default, 'kellerflint', 'Keller', 'Flint', 'adminpassword000', 'admin', now());
 insert into User values (default, 'tamberuname', 'Tamber', 'Tamberlast', 'scrAtch03', 'student', now());
@@ -21,7 +21,7 @@ insert into Rank values (default, @scratch, 'Master', 5);
 set @unranked = (select rank_id from Rank where rank_title = 'Unranked');
 set @novice = (select rank_id from Rank where rank_title = 'Novice');
 set @apprentice = (select rank_id from Rank where rank_title = 'Apprentice');
-set @adept = (select rank_id from Rank where rank_title = 'Apprentice');
+set @adept = (select rank_id from Rank where rank_title = 'Adept');
 
 insert into Badge values (default, 'Tutorial Master', @novice, 'false', 'TODO');
 insert into Badge values (default, 'Animate from Scratch', @novice, 'true', 'TODO');

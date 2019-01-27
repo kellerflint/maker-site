@@ -1,4 +1,4 @@
-/* var/www/html/maker_site/db_scripts/db_create_tables.sql */
+/* source /var/www/html/maker-site/db_scripts/db_create_tables.sql */
 
 CREATE TABLE User
 (
