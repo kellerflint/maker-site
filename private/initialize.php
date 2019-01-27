@@ -6,6 +6,8 @@ define("INSTRUCTOR_PATH", PROJECT_PATH . '/instructor');
 define("STUDENT_PATH", PROJECT_PATH . '/student');
 define("ADMIN_PATH", PROJECT_PATH . '/admin');
 define("SHARED_PATH", PROJECT_PATH . '/shared');
+define("IMG_PATH", PROJECT_PATH . '/img');
+
 
 define("WWW_ROOT", '/maker-site');
 
