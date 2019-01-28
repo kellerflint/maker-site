@@ -16,7 +16,7 @@
         $user_item = mysqli_fetch_assoc($user_set);
         $user_id = (int) $user_item["user_id"];
 
-        $rank_query = "select rank_title from Rank where rank_id = (select rank_id from User_Rank where user_id = " . $user_id . ");";
+        $rank_query = 'select rank_title from Rank where rank_id = (select rank_id from User_Rank where user_id = "' . $user_id . '");';
         
         $rank_set = mysqli_query($db, $rank_query);
         

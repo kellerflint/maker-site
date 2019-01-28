@@ -16,7 +16,7 @@
         echo '</div>';
 
         $badge_query = 'select * from Badge where rank_id = (select rank_id from Rank where rank_title = "' . $rank . '");';
-        $user_badge_query = 'select badge_id from User_Badge where user_id = ' . "2" . ';';
+        $user_badge_query = 'select badge_id from User_Badge where user_id = "' . "2" . '";';
 
         $badge_set = mysqli_query($db, $badge_query);
         $user_badge_set = mysqli_query($db, $user_badge_query);
