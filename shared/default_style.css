@@ -68,3 +68,38 @@ li a:hover {
     width: 426.66px;
     height: 213.33px;  
 }
+
+/* Badges styles */
+
+.badge-ranks-img {
+    width: 426.66px;
+    height: 213.33px;
+}
+
+.badge-list {
+    margin-left: 2%;
+    margin-right: 2%;
+
+    text-align: center;
+}
+
+.badge {
+    width: 200px;
+    height: 200px;
+}
+
+.badge-item {
+    display: inline-block;
+    margin-right: 2%;
+    width: 300px;
+}
+
+.badge-list-img {
+    text-align: center;
+    display: block;
+    margin-bottom: 50px;
+}
+
+.badge-false {
+    opacity: .2;
+}
