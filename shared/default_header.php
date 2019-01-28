@@ -15,7 +15,8 @@
 <body>
     <nav>
         <ul>
-            <li><a href=<?php echo WWW_ROOT . '/student/leaderboard.php';?>>Leaders</a>
+            <li><a href=<?php echo WWW_ROOT . '/student/badges.php';?>>Progress</a>
             <li><a href=<?php echo WWW_ROOT . '/student/ranks.php';?>>Ranks</a>
+            <li><a href=<?php echo WWW_ROOT . '/student/leaderboard.php';?>>Leaders</a>
         </ul>
     </nav>
