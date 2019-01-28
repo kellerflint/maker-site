@@ -54,3 +54,17 @@ li a:hover {
 
 /* Ranks styles */
 
+.ranks-content {
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: center;
+}
+
+.rank-item {
+    margin-bottom: 50px;
+}
+
+.ranks-img {
+    width: 426.66px;
+    height: 213.33px;  
+}

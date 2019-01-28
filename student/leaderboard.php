@@ -1,5 +1,5 @@
 <?php require_once('../private/initialize.php'); ?>
-<?php $page_title = "Maker's Site - Leaderboard"; ?>
+<?php $page_title = "Maker's Site - Leaders"; ?>
 <?php include_once('../shared/default_header.php') ?>
 
 <div class="leaderboard">
@@ -25,7 +25,7 @@
         mysqli_free_result($rank_set);
         echo '<div class="user-container">';
         echo '<div class="badge_image">';
-        echo '<img class="leader-rank" src="' . WWW_ROOT . '/img/' . strtolower($rank_item['rank_title']) . '.png">';
+        echo '<img class="leader-rank" src="' . WWW_ROOT . '/img/ranks/' . strtolower($rank_item['rank_title']) . '.png">';
         echo '</div>';
         /*echo $rank_item['rank_title'];*/
         echo '<div class="name">';
