@@ -1,4 +1,4 @@
-<?php if(!isset($page_title)){$page_title = 'Instructor Page';}?>
+<?php if(!isset($page_title)){$page_title = 'Admin Page';}?>
 
 <!DOCTYPE HTML>
 
@@ -23,5 +23,9 @@
         <ul>
             <p style="display: inline; color: white">Instructor</p>
             <li><a href=<?php echo WWW_ROOT . '/instructor/add_user.php';?>>Add User</a>
+        </ul>
+        <ul>
+            <p style="display: inline; color: white;">Admin</p>
+            <li><a href=<?php echo WWW_ROOT . '/admin/custom_query.php';?>>Query</a>
         </ul>
     </nav>
