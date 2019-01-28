@@ -44,6 +44,7 @@
 
             $img_path = WWW_ROOT . "/img/badges/" . $badge_item['badge_title'] . '.png';
             
+            /* Displays badges, assigns class based on the user's status for a particular badge */
             if ($user_has_badge == true) {
                 /* user has badge */
                 echo '<img class="badge" class="badge-true" src="' . WWW_ROOT . '/img/badges/badge.png">';
@@ -60,7 +61,6 @@
 
         }
     }
-    
 
     ?>
 

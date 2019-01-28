@@ -92,8 +92,8 @@ li a:hover {
 .badge-item {
     display: inline-block;
     margin-right: 2%;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    vertical-align: text-top;
 }
 
 .badge-list-img {
@@ -104,4 +104,8 @@ li a:hover {
 
 .badge-false {
     opacity: .2;
+}
+
+.badge-false:hover {
+    opacity: .5;
 }

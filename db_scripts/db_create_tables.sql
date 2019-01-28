@@ -39,6 +39,7 @@ CREATE TABLE Badge
     badge_title varchar(50) NOT NULL,
     rank_id int,
     badge_required varchar(5) NOT NULL,
+    badge_link varchar(200),
     badge_description varchar(500),
 
     PRIMARY KEY (badge_id),
