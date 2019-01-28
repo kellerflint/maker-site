@@ -47,11 +47,13 @@
             if ($user_has_badge == true) {
                 /* user has badge */
                 echo '<img class="badge" class="badge-true" src="' . WWW_ROOT . '/img/badges/badge.png">';
-                echo '<p>' . $badge_item['badge_title'] . ' has badge</p>';
+                echo '<p>' . $badge_item['badge_title'] . '</p>';
+                echo '<p>' . $badge_item['badge_description'] . '</p>';
             } else {
                 /* user does not have badge */
                 echo '<img class="badge badge-false" src="' . WWW_ROOT . '/img/badges/badge.png">';
-                echo '<p>' . $badge_item['badge_title'] . ' no badge</p>';
+                echo '<p>' . $badge_item['badge_title'] . '</p>';
+                echo '<p>' . $badge_item['badge_description'] . '</p>';
             }
 
             echo '</div>';

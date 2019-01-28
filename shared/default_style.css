@@ -72,6 +72,7 @@ li a:hover {
 /* Badges styles */
 
 .badge-ranks-img {
+    margin-top: 40px;
     width: 426.66px;
     height: 213.33px;
 }
@@ -91,7 +92,8 @@ li a:hover {
 .badge-item {
     display: inline-block;
     margin-right: 2%;
-    width: 300px;
+    width: 200px;
+    height: 200px;
 }
 
 .badge-list-img {
