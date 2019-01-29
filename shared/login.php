@@ -4,7 +4,7 @@
 
 require_once('../private/initialize.php');
 
-if (isset($_POST['username']) and isset($_POST['password'])){
+if (isset($_POST['username']) and isset($_POST['password'])) {
 
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -17,12 +17,15 @@ if (isset($_POST['username']) and isset($_POST['password'])){
     
     if ($count == 1){
         $_SESSION['username'] = $username;
-    }else{
+    } else {
         $fmsg = "Invalid Login Credentials.";
-        
+        echo '<p>' . $fmsg . '</p>';
+        echo'<p><a href=' . WWW_ROOT . '/shared/logout.php' . ';></a></p>';
     }
 
-} 
+} else {
+    header('Location: ' . WWW_ROOT . '/shared/logout.php');
+}
 
 if (isset($_SESSION['username'])){
     //header('Location: login_page.php');

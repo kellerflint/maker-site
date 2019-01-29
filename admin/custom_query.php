@@ -1,5 +1,4 @@
 <?php include_once('../private/initialize.php'); ?>
-<?php require_once('../private/initialize.php'); ?>
 <?php $page_title = "Maker's Site - Custom Query"; ?>
 <?php include_once('admin_header.php'); ?>
 
