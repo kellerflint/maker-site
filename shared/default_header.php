@@ -18,5 +18,7 @@
             <li><a href=<?php echo WWW_ROOT . '/student/badges.php';?>>Progress</a>
             <li><a href=<?php echo WWW_ROOT . '/student/ranks.php';?>>Ranks</a>
             <li><a href=<?php echo WWW_ROOT . '/student/leaderboard.php';?>>Leaders</a>
+            <li><a href=<?php echo WWW_ROOT . '/instructor/add_user.php';?>>Add User</a>
+            <li><a href=<?php echo WWW_ROOT . '/admin/custom_query.php';?>>Query</a>
         </ul>
     </nav>

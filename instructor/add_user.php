@@ -1,6 +1,6 @@
 <?php include_once('../private/initialize.php'); ?>
 <?php $page_title = "Maker's Site - Add User"; ?>
-<?php include_once('instructor_header.php'); ?>
+<?php include_once('../shared/default_header.php') ?>
 
 <form action='create.php' method='post'>
     <label for="first_name">First Name:</label>

@@ -28,9 +28,11 @@ CREATE TABLE Rank
     subject_id int,
     rank_title varchar(50) NOT NULL,
     rank_level int NOT NULL,
+    image_id int,
 
     PRIMARY KEY (rank_id),
     FOREIGN KEY (subject_id) REFERENCES Subject (subject_id) ON UPDATE CASCADE
+    FOREIGN KEY (image_id) REFERENCES Image (image_id) ON UPDATE CASCADE
 );
 
 CREATE TABLE Badge
@@ -41,9 +43,12 @@ CREATE TABLE Badge
     badge_required varchar(5) NOT NULL,
     badge_link varchar(200),
     badge_description varchar(500),
+    image_id int,
 
     PRIMARY KEY (badge_id),
     FOREIGN KEY (rank_id) REFERENCES Rank (rank_id) ON UPDATE CASCADE
+    FOREIGN KEY (image_id) REFERENCES Image (image_id) ON UPDATE CASCADE
+
 );
 
 CREATE TABLE User_Badge
@@ -66,6 +71,14 @@ CREATE TABLE User_Rank
     PRIMARY KEY (user_id, rank_id),
     FOREIGN KEY (user_id) REFERENCES User (user_id) ON UPDATE CASCADE,
     FOREIGN KEY (rank_id) REFERENCES Rank (rank_id) ON UPDATE CASCADE
+);
+
+CREATE TABLE Image
+(
+    image_id int NOT NULL AUTO_INCREMENT,
+    image blob,
+
+    PRIMARY KEY (image_id)
 );
 
 /* Old Version

@@ -1,6 +1,6 @@
 <?php include_once('../private/initialize.php'); ?>
 <?php $page_title = "Maker's Site - Custom Query"; ?>
-<?php include_once('admin_header.php'); ?>
+<?php include_once('../shared/default_header.php') ?>
 
 <form action='query.php' method='post'>
     <label for="query">Query:</label>
